@@ -497,7 +497,30 @@
             <p id="fact-placeholder">Loading random dog fact...</p>
             <button class="btn btn-primary" onclick="generateRandomFact()">Generate Fact</button>
         </div>
+    
+        <script>
+            async function generateRandomFact() {
+                const factElement = document.getElementById('fact-placeholder');
+                const apiUrl = 'https://dog-facts-api.herokuapp.com/api/v1/random';
+                
+                try {
+                    const response = await fetch(apiUrl);
+    
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch. Status: ${response.status}`);
+                    }
+    
+                    const data = await response.json();
+                    factElement.textContent = data.fact;
+                } catch (error) {
+                    console.error(error);
+                    factElement.textContent = 'Error while fetching random dog fact. Please try again later.';
+                }
+            }
+        </script>
     </section>
+    
+    
 
     <footer id="footer">
         <i class="fa-brands fa-twitter footer-icon"></i>
@@ -507,20 +530,7 @@
         <p>© Copyright 2024 DogWorld</p>
     </footer>
 
-    <script>
-        // JavaScript function to generate a random dog fact
-        function generateRandomFact() {
-            const facts = [
-                "Dogs have an extraordinary sense of smell.",
-                "The Basenji dog is known as the 'barkless dog.'",
-                "A dog's sense of hearing is more than ten times more acute than a human's.",
-                // Add more facts as needed
-            ];
-
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            document.getElementById('fact-placeholder').innerText = randomFact;
-        }
-    </script>
+ 
 
 </body>
 

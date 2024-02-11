@@ -1,125 +1,110 @@
-/* Add this styling to your existing styles.css or include it in your HTML file */
+/* Add the following CSS to your styles.css file or within a <style> tag in your HTML document */
 
+/* Body Styling */
 body {
-    background-color: #f8f8f8; /* Light gray background */
-    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #495057; /* Dark gray text */
 }
 
-#navigation {
-    background-color: #4CAF50; /* Dark green navigation bar */
-    padding: 12px 16px;          /* Padding around text */
-    font-family: Arial, Helvetica, sans-serif;   /* Default
-    font family and size */
-
-
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40; /* Dark background */
 }
 
-.navbar-brand, .nav-link {
-    color: #fff; /* White text for navigation links */
-
+.navbar-brand {
+    font-family: 'Sacramento', cursive;
+    font-size: 6.5rem;
+    letter-spacing: -1px;
+    line-height: .7;
+    margin-right: 2rem;
+    font-weight: 700;
+    color: rgb(20, 250, 143);
+    text-align: center;
 }
 
-/* Customize the following styles based on your design preferences */
-
-#dogs-for-sale, #dog-food, #dog-medicine, #dog-ties, #random-fact {
-    padding: 50px 0;
+.nav-link {
+    color: #fff !important; /* White text */
 }
 
+/* Section Heading Styling */
+h2 {
+    color: #000407; /* Dark gray text */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    text-decoration: wavy;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* Card Styling */
 .card {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to cards */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.card-img-top {
-    height: 200px; /* Set image height for consistency */
+.card:hover {
+    transform: scale(1.05);
 }
 
+/* Button Styling */
 .btn-primary {
-    background-color: #4CAF50; /* Dark green button */
+    background-color: #007bff; /* Primary blue color */
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-#random-fact button {
-    background-color: #4CAF50; /* Dark green button for random fact */
-    border: none;
-}
-
-#random-fact button:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
-}
-
+/* Footer Styling */
 #footer {
-    background-color: #4CAF50; /* Dark green footer */
-    color: #fff; /* White text for footer */
+    background-color: #343a40; /* Dark background */
+    color: #fff; /* White text */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
 }
 
 .footer-icon {
-    margin-right: 10px;
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff; /* White icon color */
 }
 
-/* You can add more custom styles as needed */
-/* Add this styling to your existing styles.css or include it in your HTML file */
-
-body {
-    background-color: #f8f8f8; /* Light gray background */
+/* Random Fact Button Styling */
+#random-fact button {
+    margin-top: 20px;
 }
 
-#navigation {
-    background-color: #4CAF50; /* Dark green navigation bar */
-}
+/* Image Styling */
 
-.navbar-brand, .nav-link {
-    color: #fff; /* White text for navigation links */
-}
-
-/* Customize the following styles based on your design preferences */
-
-#dogs-for-sale, #dog-food, #dog-medicine, #dog-ties, #random-fact {
-    padding: 50px 0;
-}
-
-.card {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to cards */
-}
-
+/* Image Styling */
 .card-img-top {
-    height: 200px; /* Set image height for consistency */
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 200px; /* Set a fixed height for consistency */
 }
 
-.btn-primary {
-    background-color: #4CAF50; /* Dark green button */
-    border: none;
+/* Ensure images are in the same line */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.btn-primary:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+
+/* Responsive Padding */
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#random-fact button {
-    background-color: #4CAF50; /* Dark green button for random fact */
-    border: none;
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
 }
-
-#random-fact button:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
-}
-
-#footer {
-    background-color: #4CAF50; /* Dark green footer */
-    color: #fff; /* White text for footer */
-    text-align: center;
-    padding: 10px 0;
-}
-
-.footer-icon {
-    margin-right: 10px;
-}
-
-/* You can add more custom styles as needed */
